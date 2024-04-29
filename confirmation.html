@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Order Confirmation</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Order Confirmation</h1>
+
+        <p>Your purchase order has been submitted successfully.</p>
+        
+        <h2>Order Details:</h2>
+        <ul>
+            <li><strong>Item Number:</strong> <?php echo htmlspecialchars($_SESSION['item_number']); ?></li>
+            <li><strong>Description:</strong> <?php echo htmlspecialchars($_SESSION['description']); ?></li>
+            <li><strong>Unit Cost:</strong> <?php echo htmlspecialchars($_SESSION['unit_cost']); ?></li>
+            <li><strong>Quantity:</strong> <?php echo htmlspecialchars($_SESSION['quantity']); ?></li>
+            <li><strong>Account Number:</strong> <?php echo htmlspecialchars($_SESSION['account_number']); ?></li>
+        </ul>
+
+        <a href="index.html" class="btn">Fill Out New Purchase Order</a>
+    </div>
+</body>
+</html>
